@@ -1,212 +1,228 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Muhammad Basit — Data Scientist</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Science Portfolio – GANGSTER OP</title>
+
   <style>
-    :root{
-      --bg:#0f1724; --card:#0b1220; --muted:#98a0b3; --accent:#6ee7b7; --glass: rgba(255,255,255,0.04);
-      --glass-2: rgba(255,255,255,0.02);
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
     }
-    *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,#071025 0%, #071a2b 60%);color:#eef2f7;min-height:100vh}
-    .container{max-width:1100px;margin:36px auto;padding:28px}
-    header{display:flex;align-items:center;gap:18px}
-    .avatar{width:110px;height:110px;border-radius:18px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:800;color:#08202a;font-size:36px;box-shadow:0 10px 30px rgba(2,6,23,0.6)}
-    h1{margin:0;font-size:28px}
-    p.lead{color:var(--muted);margin:6px 0 0}
+    header {
+      background: #0e1424;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: #dcdcdc;
+    }
 
-    .top-actions{margin-left:auto;display:flex;gap:10px}
-    .btn{background:var(--glass);border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:var(--accent);text-decoration:none;font-weight:600}
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
 
-    .grid{display:grid;grid-template-columns:1fr 360px;gap:26px;margin-top:28px}
-    .card{background:linear-gradient(180deg,var(--card), rgba(7,10,22,0.6));border-radius:14px;padding:18px;border:1px solid rgba(255,255,255,0.03)}
+    h2 {
+      margin-top: 40px;
+      color: #0e1424;
+      border-bottom: 3px solid #0e1424;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
 
-    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-    .skill{background:var(--glass-2);padding:8px 10px;border-radius:8px;color:var(--muted);font-weight:600}
+    .skills-list,
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
 
-    .projects{display:flex;flex-direction:column;gap:12px}
-    .project{display:flex;gap:14px;align-items:flex-start;padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent);border:1px solid rgba(255,255,255,0.02)}
-    .project .meta{flex:1}
-    .project h3{margin:0;font-size:18px}
-    .project p{margin:6px 0;color:var(--muted);font-size:14px}
-    .tags{display:flex;gap:8px;flex-wrap:wrap}
-    .tag{background:rgba(0,0,0,0.25);padding:6px 8px;border-radius:8px;font-size:13px;color:var(--muted)}
+    .skill,
+    .tag {
+      padding: 8px 14px;
+      background: #e8ecf5;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      border: 1px solid #c7d2e3;
+    }
 
-    aside .contact{display:flex;flex-direction:column;gap:10px}
-    .small{font-size:13px;color:var(--muted)}
+    .project-card {
+      background: white;
+      padding: 20px;
+      border-radius: 14px;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
 
-    footer{text-align:center;color:var(--muted);margin-top:28px;font-size:13px}
+    .project-card h3 {
+      margin-top: 0;
+      color: #0e1424;
+    }
 
-    /* responsive */
-    @media (max-width:880px){
-      .grid{grid-template-columns:1fr;}
-      .avatar{width:84px;height:84px;font-size:28px}
-      .top-actions{margin-left:0}
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background: #0e1424;
+      color: #dcdcdc;
+      text-align: center;
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <div class="avatar">MB</div>
-      <div>
-        <h1>Muhammad Basit — Aspiring Data Scientist</h1>
-        <p class="lead">I turn data into actionable insights. I build machine learning models, clean & analyze data, and create clear visual stories to help decision makers.</p>
-        <div class="skills" style="margin-top:10px">
-          <div class="skill">Python</div>
-          <div class="skill">Pandas</div>
-          <div class="skill">NumPy</div>
-          <div class="skill">Scikit‑learn</div>
-          <div class="skill">SQL</div>
-          <div class="skill">Matplotlib</div>
-          <div class="skill">Seaborn</div>
-          <div class="skill">Tableau</div>
-          <div class="skill">NLP</div>
-          <div class="skill">Deep Learning (intro)</div>
-        </div>
-      </div>
 
-      <div class="top-actions">
-        <a class="btn" href="#projects">Projects</a>
-        <a class="btn" href="#contact">Contact</a>
-      </div>
-    </header>
+<header>
+  <h1>GANGSTER OP</h1>
+  <p>Data Analyst | Machine Learning Enthusiast | Power BI & Python Developer</p>
+</header>
 
-    <div class="grid">
-      <main class="card">
-        <section id="projects">
-          <h2 style="margin:0 0 12px">Selected Projects</h2>
-          <div class="projects">
+<div class="container">
 
-            <article class="project">
-              <div style="width:84px;height:64px;border-radius:8px;background:linear-gradient(135deg,#6ee7b7,#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;color:#03282a">Churn</div>
-              <div class="meta">
-                <h3>Customer Churn Prediction</h3>
-                <p>Built a classification pipeline to predict customer churn using logistic regression, random forest and XGBoost. Performed feature engineering, handled class imbalance and created an explainable model with SHAP summaries.</p>
-                <div class="tags"><div class="tag">Python</div><div class="tag">Scikit‑learn</div><div class="tag">XGBoost</div><div class="tag">SHAP</div></div>
-              </div>
-            </article>
-
-            <article class="project">
-              <div style="width:84px;height:64px;border-radius:8px;background:linear-gradient(135deg,#f0a3ff,#7dd3fc);display:flex;align-items:center;justify-content:center;font-weight:700;color:#051023">Sales</div>
-              <div class="meta">
-                <h3>E‑Commerce Sales Dashboard</h3>
-                <p>End‑to‑end dashboard showing key business metrics (revenue, conversion, category trends) built with Tableau. Includes filters, drilldowns and an automated weekly report process.</p>
-                <div class="tags"><div class="tag">Tableau</div><div class="tag">SQL</div><div class="tag">Data Viz</div></div>
-              </div>
-            </article>
-
-            <article class="project">
-              <div style="width:84px;height:64px;border-radius:8px;background:linear-gradient(135deg,#ffd57a,#ff7aa2);display:flex;align-items:center;justify-content:center;font-weight:700;color:#1a0a06">Student</div>
-              <div class="meta">
-                <h3>Student Performance Analysis</h3>
-                <p>Exploratory Data Analysis of student performance dataset. Used feature selection and built a regression model to understand factors affecting scores; created clear visualization and recommendations.</p>
-                <div class="tags"><div class="tag">EDA</div><div class="tag">Pandas</div><div class="tag">Regression</div></div>
-              </div>
-            </article>
-
-            <article class="project">
-              <div style="width:84px;height:64px;border-radius:8px;background:linear-gradient(135deg,#b7f5ff,#d5b3ff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#062021">Sent</div>
-              <div class="meta">
-                <h3>Sentiment Analysis (NLP)</h3>
-                <p>Built a sentiment classifier using TF‑IDF + Logistic Regression and later fine‑tuned a small transformer. Included preprocessing, emoji handling and confusion matrix evaluation.</p>
-                <div class="tags"><div class="tag">NLP</div><div class="tag">Scikit‑learn</div><div class="tag">Transformers</div></div>
-              </div>
-            </article>
-
-            <article class="project">
-              <div style="width:84px;height:64px;border-radius:8px;background:linear-gradient(135deg,#9be7ff,#a0f7c6);display:flex;align-items:center;justify-content:center;font-weight:700;color:#042726">Diab</div>
-              <div class="meta">
-                <h3>Diabetes Prediction</h3>
-                <p>Classic healthcare ML project — data cleaning + model selection (Random Forest) + performance evaluation and calibration. Added interpretable feature importance and deployment notes.</p>
-                <div class="tags"><div class="tag">Healthcare</div><div class="tag">ML</div><div class="tag">Model Eval</div></div>
-              </div>
-            </article>
-
-          </div>
-        </section>
-
-        <section style="margin-top:20px">
-          <h2 style="margin:0 0 12px">Education & Experience</h2>
-          <p class="small" style="margin:0 0 6px">Self‑taught data scientist with coursework and hands‑on projects covering Python, SQL, machine learning, and visualization. Completed multiple capstone projects and several online certifications.</p>
-          <ul class="small" style="margin:8px 0 0;padding-left:18px;color:var(--muted)">
-            <li>IBM Data Science Professional Certificate — coursework & projects</li>
-            <li>Freelance analytics & small projects (SQL, dashboards)</li>
-          </ul>
-        </section>
-
-        <section style="margin-top:18px">
-          <h2 style="margin:0 0 12px">Open Source & Code</h2>
-          <p class="small">All project code is available on GitHub. Example: <a href="https://github.com/your-github-username" style="color:var(--accent);text-decoration:none">github.com/muhammadbasit</a></p>
-        </section>
-
-      </main>
-
-      <aside class="card">
-        <div style="display:flex;justify-content:space-between;align-items:center">
-          <div>
-            <h3 style="margin:0">Contact</h3>
-            <p class="small">Available for internships, freelance, and collaborations.</p>
-          </div>
-        </div>
-        <div class="contact" style="margin-top:12px">
-          <div><strong>Email</strong><div class="small">basit.email@example.com</div></div>
-          <div><strong>Location</strong><div class="small">Lahore, Pakistan</div></div>
-          <div><strong>GitHub</strong><div class="small">github.com/muhammadbasit</div></div>
-          <div><strong>LinkedIn</strong><div class="small">linkedin.com/in/muhammadbasit</div></div>
-        </div>
-
-        <div style="margin-top:16px">
-          <h4 style="margin:0 0 8px">Skills & Tools</h4>
-          <div class="skills">
-            <div class="skill">Python</div>
-            <div class="skill">Pandas</div>
-            <div class="skill">SQL</div>
-            <div class="skill">Scikit‑learn</div>
-            <div class="skill">Matplotlib</div>
-            <div class="skill">Seaborn</div>
-            <div class="skill">Tableau</div>
-            <div class="skill">Git</div>
-            <div class="skill">Docker (intro)</div>
-          </div>
-        </div>
-
-        <div style="margin-top:18px">
-          <h4 style="margin:0 0 8px">Download CV</h4>
-          <a class="btn" href="#" onclick="alert('Replace with your CV link or file path')">Download PDF</a>
-        </div>
-
-        <div id="contact" style="margin-top:18px">
-          <h4 style="margin:0 0 8px">Get in touch</h4>
-          <form onsubmit="event.preventDefault();alert('This is a demo form. Replace with your contact endpoint or mailto link.');" style="display:flex;flex-direction:column;gap:8px">
-            <input required placeholder="Your name" style="padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
-            <input required placeholder="Your email" style="padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
-            <textarea required placeholder="Message" rows="3" style="padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
-            <button class="btn" style="width:100%;">Send</button>
-          </form>
-        </div>
-
-      </aside>
-    </div>
-
-    <footer>
-      Built by Muhammad Basit • GitHub: <span style="color:var(--accent)">github.com/muhammadbasit</span>
-    </footer>
+  <!-- SKILLS SECTION -->
+  <h2>Skills & Tools</h2>
+  <div class="skills-list">
+    <span class="skill">Python</span>
+    <span class="skill">Pandas</span>
+    <span class="skill">NumPy</span>
+    <span class="skill">Matplotlib</span>
+    <span class="skill">Seaborn</span>
+    <span class="skill">Plotly</span>
+    <span class="skill">Scikit-learn</span>
+    <span class="skill">Machine Learning</span>
+    <span class="skill">Supervised Learning</span>
+    <span class="skill">Unsupervised Learning</span>
+    <span class="skill">Deep Learning (Intro)</span>
+    <span class="skill">Neural Networks</span>
+    <span class="skill">NLP / Text Analytics</span>
+    <span class="skill">SQL (Advanced)</span>
+    <span class="skill">Power BI</span>
+    <span class="skill">Tableau</span>
+    <span class="skill">Data Cleaning</span>
+    <span class="skill">EDA</span>
+    <span class="skill">Statistics</span>
+    <span class="skill">Hypothesis Testing</span>
+    <span class="skill">Business Intelligence</span>
+    <span class="skill">Storytelling & Reporting</span>
   </div>
 
-  <script>
-    // small enhancement: smooth scroll for project and contact buttons
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        e.preventDefault();
-        const t = document.querySelector(a.getAttribute('href'));
-        if(t) t.scrollIntoView({behavior:'smooth', block:'start'});
-      })
-    })
-  </script>
+  <!-- PROJECTS SECTION -->
+  <h2>Projects</h2>
+
+  <!-- EXISTING PROJECTS (Enhanced) -->
+  <div class="project-card">
+    <h3>E-commerce Sales Dashboard (Power BI)</h3>
+    <p>Interactive dashboard analyzing sales, customers, trends, and performance KPIs.</p>
+    <div class="project-tags">
+      <span class="tag">Power BI</span>
+      <span class="tag">Data Modeling</span>
+      <span class="tag">DAX</span>
+      <span class="tag">Business Intelligence</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>Churn Prediction Model</h3>
+    <p>Machine learning model to predict customer churn using classification algorithms.</p>
+    <div class="project-tags">
+      <span class="tag">Machine Learning</span>
+      <span class="tag">Classification</span>
+      <span class="tag">EDA</span>
+      <span class="tag">Model Evaluation</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>Student Performance Prediction</h3>
+    <p>Predicting student scores and academic performance using ML regression techniques.</p>
+    <div class="project-tags">
+      <span class="tag">Regression</span>
+      <span class="tag">Pandas</span>
+      <span class="tag">NumPy</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>Sentiment Analysis (NLP)</h3>
+    <p>Analysing text reviews using NLP preprocessing, vectorization, and classification.</p>
+    <div class="project-tags">
+      <span class="tag">NLP</span>
+      <span class="tag">Text Classification</span>
+      <span class="tag">Machine Learning</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>Diabetes Prediction</h3>
+    <p>Built a classification model to predict diabetes based on patient features.</p>
+    <div class="project-tags">
+      <span class="tag">ML Classification</span>
+      <span class="tag">EDA</span>
+      <span class="tag">Model Building</span>
+    </div>
+  </div>
+
+  <!-- NEW PROJECTS BASED ON ANALYTIX CAMP -->
+  <h2>AnalytixCamp Projects (Current / Upcoming)</h2>
+
+  <div class="project-card">
+    <h3>World Life Expectancy Analysis (In Progress)</h3>
+    <p>Data cleaning, transformation, trend analysis, and health insights exploration.</p>
+    <div class="project-tags">
+      <span class="tag">Pandas</span>
+      <span class="tag">EDA</span>
+      <span class="tag">Visualization</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>Video Game Sales Analytics</h3>
+    <p>Identifying patterns, regional performance, platform trends, and sales predictions.</p>
+    <div class="project-tags">
+      <span class="tag">EDA</span>
+      <span class="tag">Matplotlib</span>
+      <span class="tag">Seaborn</span>
+      <span class="tag">Storytelling</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>Customer Segmentation using Clustering</h3>
+    <p>Applying unsupervised machine learning to group customers and analyze behaviors.</p>
+    <div class="project-tags">
+      <span class="tag">Clustering</span>
+      <span class="tag">Unsupervised ML</span>
+      <span class="tag">EDA</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>Text Classification / Product Review Sentiment (NLP)</h3>
+    <p>Sentiment analysis + building a classifier using TF-IDF / word embeddings.</p>
+    <div class="project-tags">
+      <span class="tag">NLP</span>
+      <span class="tag">Text Analytics</span>
+      <span class="tag">ML</span>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 GANGSTER OP — Data Science Portfolio
+</footer>
+
 </body>
 </html>
