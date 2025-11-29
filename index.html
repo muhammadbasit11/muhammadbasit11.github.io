@@ -1,41 +1,228 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Muhammad Basit — Data Scientist</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#081423; --card:#0c1a33; --muted:#9fb4d1; --accent:#3ba7ff; --glass: rgba(255,255,255,0.05);
-      --glass-2: rgba(255,255,255,0.03);
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,#061021 0%, #0a1b33 60%);color:#eef2f7;min-height:100vh}
-    .container{max-width:1100px;margin:36px auto;padding:28px}
-    header{display:flex;align-items:center;gap:18px}
-    .avatar{width:110px;height:110px;border-radius:50%;overflow:hidden;border:3px solid var(--accent);}
-    .avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%;}
-    h1{margin:0;font-size:28px}
-    p.lead{color:var(--muted);margin:6px 0 0}
-    .top-actions{margin-left:auto;display:flex;gap:10px}
-    .btn{background:var(--glass);border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:var(--accent);text-decoration:none;font-weight:600}
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Science Portfolio – MUHAMMAD BASIT</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background: #0e1424;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: #dcdcdc;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: #0e1424;
+      border-bottom: 3px solid #0e1424;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .skills-list,
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .skill,
+    .tag {
+      padding: 8px 14px;
+      background: #e8ecf5;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      border: 1px solid #c7d2e3;
+    }
+
+    .project-card {
+      background: white;
+      padding: 20px;
+      border-radius: 14px;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: #0e1424;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background: #0e1424;
+      color: #dcdcdc;
+      text-align: center;
+    }
+  </style>
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <div class="avatar"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8Q"+"" alt="Muhammad Basit"></div>
-      <div>
-        <h1>Muhammad Basit — Aspiring Data Scientist</h1>
-        <p class="lead">I turn data into actionable insights. I build machine learning models, clean & analyze data, and create clear visual stories to help decision makers.</p>
-      </div>
-      <div class="top-actions">
-        <a class="btn" href="#projects">Projects</a>
-        <a class="btn" href="#contact">Contact</a>
-      </div>
-    </header>
-  </div>
+
+<header>
+  <h1>GANGSTER OP</h1>
+  <p>Data Analyst | Machine Learning Enthusiast | Power BI & Python Developer</p>
+</header>
+
+<div class="container">
+
+  <!-- SKILLS SECTION -->
+  <h2>Skills & Tools</h2>
+  <div class="skills-list">
+    <span class="skill">Python</span>
+    <span class="skill">Pandas</span>
+    <span class="skill">NumPy</span>
+    <span class="skill">Matplotlib</span>
+    <span class="skill">Seaborn</span>
+    <span class="skill">Plotly</span>
+    <span class="skill">Scikit-learn</span>
+    <span class="skill">Machine Learning</span>
+    <span class="skill">Supervised Learning</span>
+    <span class="skill">Unsupervised Learning</span>
+    <span class="skill">Deep Learning (Intro)</span>
+    <span class="skill">Neural Networks</span>
+    <span class="skill">NLP / Text Analytics</span>
+    <span class="skill">SQL (Advanced)</span>
+    <span class="skill">Power BI</span>
+    <span class="skill">Tableau</span>
+    <span class="skill">Data Cleaning</span>
+    <span class="skill">EDA</span>
+    <span class="skill">Statistics</span>
+    <span class="skill">Hypothesis Testing</span>
+    <span class="skill">Business Intelligence</span>
+    <span class="skill">Storytelling & Reporting</span>
+  </div>
+
+  <!-- PROJECTS SECTION -->
+  <h2>Projects</h2>
+
+  <!-- EXISTING PROJECTS (Enhanced) -->
+  <div class="project-card">
+    <h3>E-commerce Sales Dashboard (Power BI)</h3>
+    <p>Interactive dashboard analyzing sales, customers, trends, and performance KPIs.</p>
+    <div class="project-tags">
+      <span class="tag">Power BI</span>
+      <span class="tag">Data Modeling</span>
+      <span class="tag">DAX</span>
+      <span class="tag">Business Intelligence</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>Churn Prediction Model</h3>
+    <p>Machine learning model to predict customer churn using classification algorithms.</p>
+    <div class="project-tags">
+      <span class="tag">Machine Learning</span>
+      <span class="tag">Classification</span>
+      <span class="tag">EDA</span>
+      <span class="tag">Model Evaluation</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>Student Performance Prediction</h3>
+    <p>Predicting student scores and academic performance using ML regression techniques.</p>
+    <div class="project-tags">
+      <span class="tag">Regression</span>
+      <span class="tag">Pandas</span>
+      <span class="tag">NumPy</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>Sentiment Analysis (NLP)</h3>
+    <p>Analysing text reviews using NLP preprocessing, vectorization, and classification.</p>
+    <div class="project-tags">
+      <span class="tag">NLP</span>
+      <span class="tag">Text Classification</span>
+      <span class="tag">Machine Learning</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>Diabetes Prediction</h3>
+    <p>Built a classification model to predict diabetes based on patient features.</p>
+    <div class="project-tags">
+      <span class="tag">ML Classification</span>
+      <span class="tag">EDA</span>
+      <span class="tag">Model Building</span>
+    </div>
+  </div>
+
+  <!-- NEW PROJECTS BASED ON ANALYTIX CAMP -->
+  <h2>AnalytixCamp Projects (Current / Upcoming)</h2>
+
+  <div class="project-card">
+    <h3>World Life Expectancy Analysis (In Progress)</h3>
+    <p>Data cleaning, transformation, trend analysis, and health insights exploration.</p>
+    <div class="project-tags">
+      <span class="tag">Pandas</span>
+      <span class="tag">EDA</span>
+      <span class="tag">Visualization</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>Video Game Sales Analytics</h3>
+    <p>Identifying patterns, regional performance, platform trends, and sales predictions.</p>
+    <div class="project-tags">
+      <span class="tag">EDA</span>
+      <span class="tag">Matplotlib</span>
+      <span class="tag">Seaborn</span>
+      <span class="tag">Storytelling</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>Customer Segmentation using Clustering</h3>
+    <p>Applying unsupervised machine learning to group customers and analyze behaviors.</p>
+    <div class="project-tags">
+      <span class="tag">Clustering</span>
+      <span class="tag">Unsupervised ML</span>
+      <span class="tag">EDA</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>Text Classification / Product Review Sentiment (NLP)</h3>
+    <p>Sentiment analysis + building a classifier using TF-IDF / word embeddings.</p>
+    <div class="project-tags">
+      <span class="tag">NLP</span>
+      <span class="tag">Text Analytics</span>
+      <span class="tag">ML</span>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 MUHAMMAD BASIT — Data Science Portfolio
+</footer>
+
 </body>
 </html>
