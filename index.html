@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muhammad Basit — Data Scientist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#98a0b3; --accent:#6ee7b7; --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.02);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#071025 0%, #071a2b 60%);color:#eef2f7;min-height:100vh}
+    .container{max-width:1100px;margin:36px auto;padding:28px}
+    header{display:flex;align-items:center;gap:18px}
+    .avatar{width:110px;height:110px;border-radius:18px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:800;color:#08202a;font-size:36px;box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+    h1{margin:0;font-size:28px}
+    p.lead{color:var(--muted);margin:6px 0 0}
+
+    .top-actions{margin-left:auto;display:flex;gap:10px}
+    .btn{background:var(--glass);border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:var(--accent);text-decoration:none;font-weight:600}
+
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:26px;margin-top:28px}
+    .card{background:linear-gradient(180deg,var(--card), rgba(7,10,22,0.6));border-radius:14px;padding:18px;border:1px solid rgba(255,255,255,0.03)}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .skill{background:var(--glass-2);padding:8px 10px;border-radius:8px;color:var(--muted);font-weight:600}
+
+    .projects{display:flex;flex-direction:column;gap:12px}
+    .project{display:flex;gap:14px;align-items:flex-start;padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent);border:1px solid rgba(255,255,255,0.02)}
+    .project .meta{flex:1}
+    .project h3{margin:0;font-size:18px}
+    .project p{margin:6px 0;color:var(--muted);font-size:14px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{background:rgba(0,0,0,0.25);padding:6px 8px;border-radius:8px;font-size:13px;color:var(--muted)}
+
+    aside .contact{display:flex;flex-direction:column;gap:10px}
+    .small{font-size:13px;color:var(--muted)}
+
+    footer{text-align:center;color:var(--muted);margin-top:28px;font-size:13px}
+
+    /* responsive */
+    @media (max-width:880px){
+      .grid{grid-template-columns:1fr;}
+      .avatar{width:84px;height:84px;font-size:28px}
+      .top-actions{margin-left:0}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">MB</div>
+      <div>
+        <h1>Muhammad Basit — Aspiring Data Scientist</h1>
+        <p class="lead">I turn data into actionable insights. I build machine learning models, clean & analyze data, and create clear visual stories to help decision makers.</p>
+        <div class="skills" style="margin-top:10px">
+          <div class="skill">Python</div>
+          <div class="skill">Pandas</div>
+          <div class="skill">NumPy</div>
+          <div class="skill">Scikit‑learn</div>
+          <div class="skill">SQL</div>
+          <div class="skill">Matplotlib</div>
+          <div class="skill">Seaborn</div>
+          <div class="skill">Tableau</div>
+          <div class="skill">NLP</div>
+          <div class="skill">Deep Learning (intro)</div>
+        </div>
+      </div>
+
+      <div class="top-actions">
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn" href="#contact">Contact</a>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main class="card">
+        <section id="projects">
+          <h2 style="margin:0 0 12px">Selected Projects</h2>
+          <div class="projects">
+
+            <article class="project">
+              <div style="width:84px;height:64px;border-radius:8px;background:linear-gradient(135deg,#6ee7b7,#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;color:#03282a">Churn</div>
+              <div class="meta">
+                <h3>Customer Churn Prediction</h3>
+                <p>Built a classification pipeline to predict customer churn using logistic regression, random forest and XGBoost. Performed feature engineering, handled class imbalance and created an explainable model with SHAP summaries.</p>
+                <div class="tags"><div class="tag">Python</div><div class="tag">Scikit‑learn</div><div class="tag">XGBoost</div><div class="tag">SHAP</div></div>
+              </div>
+            </article>
+
+            <article class="project">
+              <div style="width:84px;height:64px;border-radius:8px;background:linear-gradient(135deg,#f0a3ff,#7dd3fc);display:flex;align-items:center;justify-content:center;font-weight:700;color:#051023">Sales</div>
+              <div class="meta">
+                <h3>E‑Commerce Sales Dashboard</h3>
+                <p>End‑to‑end dashboard showing key business metrics (revenue, conversion, category trends) built with Tableau. Includes filters, drilldowns and an automated weekly report process.</p>
+                <div class="tags"><div class="tag">Tableau</div><div class="tag">SQL</div><div class="tag">Data Viz</div></div>
+              </div>
+            </article>
+
+            <article class="project">
+              <div style="width:84px;height:64px;border-radius:8px;background:linear-gradient(135deg,#ffd57a,#ff7aa2);display:flex;align-items:center;justify-content:center;font-weight:700;color:#1a0a06">Student</div>
+              <div class="meta">
+                <h3>Student Performance Analysis</h3>
+                <p>Exploratory Data Analysis of student performance dataset. Used feature selection and built a regression model to understand factors affecting scores; created clear visualization and recommendations.</p>
+                <div class="tags"><div class="tag">EDA</div><div class="tag">Pandas</div><div class="tag">Regression</div></div>
+              </div>
+            </article>
+
+            <article class="project">
+              <div style="width:84px;height:64px;border-radius:8px;background:linear-gradient(135deg,#b7f5ff,#d5b3ff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#062021">Sent</div>
+              <div class="meta">
+                <h3>Sentiment Analysis (NLP)</h3>
+                <p>Built a sentiment classifier using TF‑IDF + Logistic Regression and later fine‑tuned a small transformer. Included preprocessing, emoji handling and confusion matrix evaluation.</p>
+                <div class="tags"><div class="tag">NLP</div><div class="tag">Scikit‑learn</div><div class="tag">Transformers</div></div>
+              </div>
+            </article>
+
+            <article class="project">
+              <div style="width:84px;height:64px;border-radius:8px;background:linear-gradient(135deg,#9be7ff,#a0f7c6);display:flex;align-items:center;justify-content:center;font-weight:700;color:#042726">Diab</div>
+              <div class="meta">
+                <h3>Diabetes Prediction</h3>
+                <p>Classic healthcare ML project — data cleaning + model selection (Random Forest) + performance evaluation and calibration. Added interpretable feature importance and deployment notes.</p>
+                <div class="tags"><div class="tag">Healthcare</div><div class="tag">ML</div><div class="tag">Model Eval</div></div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section style="margin-top:20px">
+          <h2 style="margin:0 0 12px">Education & Experience</h2>
+          <p class="small" style="margin:0 0 6px">Self‑taught data scientist with coursework and hands‑on projects covering Python, SQL, machine learning, and visualization. Completed multiple capstone projects and several online certifications.</p>
+          <ul class="small" style="margin:8px 0 0;padding-left:18px;color:var(--muted)">
+            <li>IBM Data Science Professional Certificate — coursework & projects</li>
+            <li>Freelance analytics & small projects (SQL, dashboards)</li>
+          </ul>
+        </section>
+
+        <section style="margin-top:18px">
+          <h2 style="margin:0 0 12px">Open Source & Code</h2>
+          <p class="small">All project code is available on GitHub. Example: <a href="https://github.com/your-github-username" style="color:var(--accent);text-decoration:none">github.com/muhammadbasit</a></p>
+        </section>
+
+      </main>
+
+      <aside class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <h3 style="margin:0">Contact</h3>
+            <p class="small">Available for internships, freelance, and collaborations.</p>
+          </div>
+        </div>
+        <div class="contact" style="margin-top:12px">
+          <div><strong>Email</strong><div class="small">basit.email@example.com</div></div>
+          <div><strong>Location</strong><div class="small">Lahore, Pakistan</div></div>
+          <div><strong>GitHub</strong><div class="small">github.com/muhammadbasit</div></div>
+          <div><strong>LinkedIn</strong><div class="small">linkedin.com/in/muhammadbasit</div></div>
+        </div>
+
+        <div style="margin-top:16px">
+          <h4 style="margin:0 0 8px">Skills & Tools</h4>
+          <div class="skills">
+            <div class="skill">Python</div>
+            <div class="skill">Pandas</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Scikit‑learn</div>
+            <div class="skill">Matplotlib</div>
+            <div class="skill">Seaborn</div>
+            <div class="skill">Tableau</div>
+            <div class="skill">Git</div>
+            <div class="skill">Docker (intro)</div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px">
+          <h4 style="margin:0 0 8px">Download CV</h4>
+          <a class="btn" href="#" onclick="alert('Replace with your CV link or file path')">Download PDF</a>
+        </div>
+
+        <div id="contact" style="margin-top:18px">
+          <h4 style="margin:0 0 8px">Get in touch</h4>
+          <form onsubmit="event.preventDefault();alert('This is a demo form. Replace with your contact endpoint or mailto link.');" style="display:flex;flex-direction:column;gap:8px">
+            <input required placeholder="Your name" style="padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+            <input required placeholder="Your email" style="padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+            <textarea required placeholder="Message" rows="3" style="padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
+            <button class="btn" style="width:100%;">Send</button>
+          </form>
+        </div>
+
+      </aside>
+    </div>
+
+    <footer>
+      Built by Muhammad Basit • GitHub: <span style="color:var(--accent)">github.com/muhammadbasit</span>
+    </footer>
+  </div>
+
+  <script>
+    // small enhancement: smooth scroll for project and contact buttons
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const t = document.querySelector(a.getAttribute('href'));
+        if(t) t.scrollIntoView({behavior:'smooth', block:'start'});
+      })
+    })
+  </script>
+</body>
+</html>
